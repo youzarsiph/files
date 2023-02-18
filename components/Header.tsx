@@ -1,4 +1,5 @@
 import React from "react";
+import theme from "../theme";
 import { Appbar } from "react-native-paper";
 
 interface HeaderProps {
@@ -19,7 +20,9 @@ export default class Header extends React.Component<HeaderProps> {
 
   render(): React.ReactNode {
     return (
-      <Appbar.Header style={{ backgroundColor: "#fff" }}>
+      <Appbar.Header
+        style={{ backgroundColor: !theme.dark ? "#fff" : undefined }}
+      >
         {this.props.back && <Appbar.BackAction onPress={() => {}} />}
         <Appbar.Content title={this.props.title} />
         <Appbar.Action icon="magnify" onPress={() => {}} />

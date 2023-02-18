@@ -1,4 +1,5 @@
 import React from "react";
+import theme from "../theme";
 import { Home, Recent, Settings } from "../screens";
 import { BottomNavigation } from "react-native-paper";
 
@@ -42,7 +43,7 @@ export default function Navigation() {
       navigationState={{ index, routes }}
       sceneAnimationEnabled
       sceneAnimationType="shifting"
-      barStyle={{ backgroundColor: "#fff" }}
+      barStyle={{ backgroundColor: !theme.dark ? "#fff" : undefined }}
     />
   );
 }
