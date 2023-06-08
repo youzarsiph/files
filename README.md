@@ -1,2 +1,3 @@
 # files
-Cross platform file browser for Android and IOS. 
+
+File browser for Android.
